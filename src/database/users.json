@@ -2,6 +2,7 @@
   "rows": [
     {
       "username": "GasparP",
+      "id": "27112009",
       "level": 2,
       "status": "active",
       "position": ["support", "developer"],
@@ -9,6 +10,7 @@
     },
     {
       "username": "TomasP",
+      "id": "20091995",
       "level": 2,
       "status": "active",
       "position": ["support", "developer"],
@@ -16,6 +18,7 @@
     },
     {
       "username": "AilenP",
+      "id": "30091990",
       "level": 2,
       "status": "active",
       "position": ["support"],
