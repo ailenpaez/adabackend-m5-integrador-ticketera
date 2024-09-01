@@ -1,0 +1,25 @@
+{
+  "rows": [
+    {
+      "username": "GasparP",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "developer"],
+      "country": "ARG"
+    },
+    {
+      "username": "TomasP",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "developer"],
+      "country": "ARG"
+    },
+    {
+      "username": "AilenP",
+      "level": 2,
+      "status": "active",
+      "position": ["support"],
+      "country": "ARG"
+    }
+  ]
+}

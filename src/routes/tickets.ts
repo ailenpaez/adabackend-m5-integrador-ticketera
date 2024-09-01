@@ -4,7 +4,9 @@ import TicketsController from "../controller/tickets";
 
 const ticketsRouter = Router()
 
-ticketsRouter.get("/", (req, res) => {TicketsController.getAllTickets(req, res)})
+ticketsRouter.get("/",TicketsController.getAllTickets)
 
 
 export default ticketsRouter
+
+//MINUTO 29.35 CLASE 16/8
