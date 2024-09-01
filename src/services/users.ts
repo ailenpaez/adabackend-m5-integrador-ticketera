@@ -11,8 +11,19 @@ class UsersService {
   static getUserById(id: string) {
     const users = UsersModel.getAllUsers();
 
-    const user = users.find((user) => user.id === id);
+    const user = users.rows.find((user) => user.id === id);
     return user;
+  }
+
+  static createNewUser(data){
+    // LLAMA A ZOD PARA VALIDAR
+    const users = UsersModel.getAllUsers();
+
+    users.rows.push(data);
+
+    UsersModel.writeUser(users);
+
+    return true
 
   }
 }

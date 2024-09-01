@@ -1,5 +1,6 @@
 import express, {json} from 'express';
 import indexRouter from './routes';
+import errorHandler from './middlewares/errorHandler';
 
 const app = express();
 
@@ -17,8 +18,6 @@ app.use("/status", (req, res) => {
 })
 
 app.use("/", indexRouter);
-
-
-
+app.use(errorHandler)
 
 export default app

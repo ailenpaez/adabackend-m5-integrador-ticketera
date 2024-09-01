@@ -2,7 +2,7 @@ import users from "../database/users.json";
 import { writeFile } from "jsonfile";
 class UsersModel {
   static getAllUsers() {
-    return users.rows;
+    return users
   }
 
   static writeUser(data) {
