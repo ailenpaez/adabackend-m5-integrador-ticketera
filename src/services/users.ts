@@ -9,13 +9,20 @@ class UsersService {
   }
 
   static getUserById(id: string) {
-    const users = UsersModel.getAllUsers();
+    try {
+      const users = UsersModel.getAllUsers();
 
-    const user = users.rows.find((user) => user.id === id);
-    return user;
+      const user = users.rows.find((user) => user.id === id);
+
+      if (!user) throw new Error(`El usuario ${id} no se encontró.`);
+
+      return user;
+    } catch (error) {
+      throw error;
+    }
   }
 
-  static createNewUser(data){
+  static createNewUser(data) {
     // LLAMA A ZOD PARA VALIDAR
     const users = UsersModel.getAllUsers();
 
@@ -23,8 +30,7 @@ class UsersService {
 
     UsersModel.writeUser(users);
 
-    return true
-
+    return true;
   }
 }
 

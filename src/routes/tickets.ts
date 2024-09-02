@@ -4,7 +4,7 @@ import TicketsController from "../controller/tickets";
 
 const ticketsRouter = Router()
 
-ticketsRouter.get("/",TicketsController.getAllTickets)
+// ticketsRouter.get("/",TicketsController.getAllTickets)
 
 
 export default ticketsRouter

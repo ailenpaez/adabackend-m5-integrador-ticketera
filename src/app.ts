@@ -18,6 +18,6 @@ app.use("/status", (req, res) => {
 })
 
 app.use("/", indexRouter);
-app.use(errorHandler)
+app.use(errorHandler) // ESTE VA AL FINAL
 
 export default app
