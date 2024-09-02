@@ -19,7 +19,7 @@ class UsersController {
   static getUserById(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
-      if (!id) customError({message: "NOT SEND ID", status: 400})
+      if (!id) customError({ message: "NOT SEND ID", status: 400 });
 
       const user = UsersService.getUserById(id);
 
@@ -33,7 +33,7 @@ class UsersController {
     try {
       UsersService.createNewUser(req.body);
 
-      res.status(201)
+      res.status(201);
     } catch (error) {
       next(error);
     }

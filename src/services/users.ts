@@ -1,8 +1,7 @@
 //MODEL
-import { v4 } from "uuid";
+import { uuid } from "uuidv4";
 import UsersModel from "../model/users";
 import customError from "../utils/custom-error";
-import { uuid } from "uuidv4";
 
 class UsersService {
   static getAllUsers() {
@@ -28,13 +27,13 @@ class UsersService {
     // LLAMA A ZOD PARA VALIDAR
     const users = UsersModel.getAllUsers();
 
+    data.id = uuid();
 
-    data.id = uuid()
     users.rows.push(data);
 
     const createUser = UsersModel.writeUser(users);
 
-    if (!createUser) customError({ message: "User NOT CREATED", status: 400 });
+    if (!createUser) customError({ message: "User NOT CREATED", status: 404 });
 
     return true;
   }

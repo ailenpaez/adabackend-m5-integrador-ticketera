@@ -15,11 +15,10 @@
       "position": ["support", "developer"],
       "country": "ARG",
       "id": "20091995"
-
     },
     {
       "username": "AilenP",
-        "level": 2,
+      "level": 2,
       "status": "active",
       "position": ["support"],
       "country": "ARG",
@@ -32,6 +31,38 @@
       "position": ["support", "frontend"],
       "country": "ARG",
       "id": "8c3061f0-0164-4245-a8c4-71db191d736f"
+    },
+    {
+      "username": "SimonT",
+      "level": 3,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "af2c25e1-8a45-4725-b0b0-e19d2127ce8a"
+    },
+    {
+      "username": "SaschaT",
+      "level": 5,
+      "status": "active",
+      "position": ["support", "Fullstack"],
+      "country": "ARG",
+      "id": "60fd2320-32a7-4913-9a6e-256f6e0779c0"
+    },
+    {
+      "username": "MicaelaG",
+      "level": 3,
+      "status": "active",
+      "position": ["UX/UI", "Graphics"],
+      "country": "ARG",
+      "id": "f7eaed6d-4123-441e-80d8-3f7d8b3962f4"
+    },
+    {
+      "username": "JorgeP",
+      "level": 3,
+      "status": "active",
+      "position": ["Techniques", "Repairs"],
+      "country": "ARG",
+      "id": "95bcf5f2-8e56-4b02-bd0e-4e1a50227f2d"
     }
   ]
 }
