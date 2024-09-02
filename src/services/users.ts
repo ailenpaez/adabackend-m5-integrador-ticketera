@@ -1,6 +1,8 @@
 //MODEL
-
+import { v4 } from "uuid";
 import UsersModel from "../model/users";
+import customError from "../utils/custom-error";
+import { uuid } from "uuidv4";
 
 class UsersService {
   static getAllUsers() {
@@ -14,7 +16,7 @@ class UsersService {
 
       const user = users.rows.find((user) => user.id === id);
 
-      if (!user) throw new Error(`El usuario ${id} no se encontró.`);
+      if (!user) customError({ message: "User NOT found", status: 404 });
 
       return user;
     } catch (error) {
@@ -26,9 +28,13 @@ class UsersService {
     // LLAMA A ZOD PARA VALIDAR
     const users = UsersModel.getAllUsers();
 
+
+    data.id = uuid()
     users.rows.push(data);
 
-    UsersModel.writeUser(users);
+    const createUser = UsersModel.writeUser(users);
+
+    if (!createUser) customError({ message: "User NOT CREATED", status: 400 });
 
     return true;
   }

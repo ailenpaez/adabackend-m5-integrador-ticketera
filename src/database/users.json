@@ -2,27 +2,36 @@
   "rows": [
     {
       "username": "GasparP",
-      "id": "27102009",
       "level": 2,
       "status": "active",
       "position": ["support", "developer"],
-      "country": "ARG"
+      "country": "ARG",
+      "id": "27102009"
     },
     {
       "username": "TomasP",
-      "id": "20091995",
       "level": 2,
       "status": "active",
       "position": ["support", "developer"],
-      "country": "ARG"
+      "country": "ARG",
+      "id": "20091995"
+
     },
     {
       "username": "AilenP",
-      "id": "30091990",
-      "level": 2,
+        "level": 2,
       "status": "active",
       "position": ["support"],
-      "country": "ARG"
+      "country": "ARG",
+      "id": "30091990"
+    },
+    {
+      "username": "ClaraT",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "8c3061f0-0164-4245-a8c4-71db191d736f"
     }
   ]
 }

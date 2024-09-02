@@ -6,8 +6,8 @@ class UsersModel {
   }
 
   static writeUser(data) {
-    writeFile("../database/users.json", data) //ver que onda con esto, autofill me lo tira así
-    return true
+    // writeFile("./src/database/users.json", data) //ver que onda con esto, autofill me lo tira así
+    return false
     }
 
 
