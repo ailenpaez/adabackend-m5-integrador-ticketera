@@ -1,4 +1,4 @@
-<h1 align="center"> DESAFÍO INTEGRADOR FINAL </h1>
+<h1 align="center"> DESAFÍO INTEGRADOR - MÓDULO 5 </h1>
 <h3 align="center"> RESTful API </h3>
 
 Para el cierre de este módulo, el desafío integrador consiste en desarrollar una API REST siguiendo los lineamientos que vimos a lo largo de las clases. La consigna es desarrollar un backend que permita automatizar las tareas de algún trabajo que ustedes elijan, como por ejemplo un sistema de gestión de stock de un local que comercia mercadería, o para administrar los pedidos de algún restaurant.
