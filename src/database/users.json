@@ -2,6 +2,8 @@
   "rows": [
     {
       "username": "GasparP",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 2,
       "status": "active",
       "position": ["support", "developer"],
@@ -10,6 +12,8 @@
     },
     {
       "username": "TomasP",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 2,
       "status": "active",
       "position": ["support", "developer"],
@@ -18,6 +22,8 @@
     },
     {
       "username": "AilenP",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 2,
       "status": "active",
       "position": ["support"],
@@ -26,6 +32,8 @@
     },
     {
       "username": "ClaraT",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 2,
       "status": "active",
       "position": ["support", "frontend"],
@@ -34,6 +42,8 @@
     },
     {
       "username": "SimonT",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 3,
       "status": "active",
       "position": ["support", "frontend"],
@@ -42,6 +52,8 @@
     },
     {
       "username": "SaschaT",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 5,
       "status": "active",
       "position": ["support", "Fullstack"],
@@ -50,6 +62,8 @@
     },
     {
       "username": "MicaelaG",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 3,
       "status": "active",
       "position": ["UX/UI", "Graphics"],
@@ -58,6 +72,8 @@
     },
     {
       "username": "JorgeP",
+      "email": "usuario@empresa.com",
+      "password": "123abc",
       "level": 3,
       "status": "active",
       "position": ["Techniques", "Repairs"],

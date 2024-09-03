@@ -1,5 +1,6 @@
 import users from "../database/users.json";
 import { writeFile } from "jsonfile";
+
 class UsersModel {
   static getAllUsers() {
     return users;

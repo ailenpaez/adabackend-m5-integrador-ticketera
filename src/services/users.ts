@@ -2,11 +2,16 @@
 import { uuid } from "uuidv4";
 import UsersModel from "../model/users";
 import customError from "../utils/custom-error";
+import { UserSchema } from "../interfaces/userInterfaces";
 
 class UsersService {
   static getAllUsers() {
-    const users = UsersModel.getAllUsers();
-    return users;
+    try {
+      const usersDB = UsersModel.getAllUsers();
+      return usersDB;
+    } catch (error) {
+      throw error;
+    }
   }
 
   static getUserById(id: string) {
@@ -23,19 +28,40 @@ class UsersService {
     }
   }
 
-  static createNewUser(data) {
-    // LLAMA A ZOD PARA VALIDAR
-    const users = UsersModel.getAllUsers();
+  static createNewUser(user: UserSchema) {
+    try {
+      const usersData = UsersService.getAllUsers();
+      const userId = uuid();
 
-    data.id = uuid();
+      //OBJETO DE LA DB ESTRUCTURADO POR PARTES
+      usersData.rows.push({
+        username: user.username,
+        email: user.email,
+        password: user.password,
+        level: user.level,
+        status: user.status,
+        position: user.position,
+        country: user.country,
+        id: userId,
+      });
 
-    users.rows.push(data);
+      UsersModel.writeUser(usersData);
 
-    const createUser = UsersModel.writeUser(users);
+      return userId;
+    } catch (error) {}
 
-    if (!createUser) customError({ message: "User NOT CREATED", status: 404 });
+      // LLAMA A ZOD PARA VALIDAR //! ASÍ LO TENIA ANTES Y FUNCIONANDO
+    //   const users = UsersModel.getAllUsers();
 
-    return true;
+    //   data.id = uuid();
+
+    //   users.rows.push(data);
+
+    //   const createUser = UsersModel.writeUser(users);
+
+    //   if (!createUser) customError({ message: "User NOT CREATED", status: 404 });
+
+    //   return true;
   }
 }
 
