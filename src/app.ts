@@ -13,7 +13,7 @@ app.use(json());
 app.use("/status", (req, res) => {
     res.status(200).json({
         status:"OK",
-        environment: "development"
+        environment: process.env.ENVIRONMENT
     })
 })
 

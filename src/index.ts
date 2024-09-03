@@ -1,5 +1,5 @@
 import app from "./app";
 
-const PORT = 4334  
+const PORT = process.env.PORT  
 
 app.listen(PORT, () => console.log("SERVER_LISTENING_PORT ->", PORT));
