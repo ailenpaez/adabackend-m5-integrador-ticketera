@@ -1,24 +1,35 @@
 import { Request, Response } from "express";
 import TicketsModel from "../model/tickets";
 
-
 class TicketsServices {
-  static getAllTickets(req: Request, res: Response) {
+  static async getAllTickets() {
     try {
-    } catch (error) {throw error;}
+      await TicketsModel.getAllTickets();
+    } catch (error) {
+      throw error;
+    }
   }
 
-  static createTicket(req: Request, res: Response) {
+  static async createTicket(data) {
     try {
-    } catch (error) {throw error;}
+      await TicketsModel.writeTicket("ALGO");
+    } catch (error) {
+      throw error;
+    }
   }
-  static updateTicket(req: Request, res: Response) {
+  static async updateTicket(id, data) {
     try {
-    } catch (error) {throw error;}
+      await TicketsModel.writeTicket("ALGO");
+    } catch (error) {
+      throw error;
+    }
   }
-  static deleteTicket(req: Request, res: Response) {
+  static async deleteTicket(id) {
     try {
-    } catch (error) {throw error;}
+      await TicketsModel.writeTicket("ALGO");
+    } catch (error) {
+      throw error;
+    }
   }
 }
 

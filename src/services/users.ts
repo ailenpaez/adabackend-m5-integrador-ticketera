@@ -5,18 +5,18 @@ import customError from "../utils/custom-error";
 import { UserSchema } from "../interfaces/userInterfaces";
 
 class UsersService {
-  static getAllUsers() {
+  static async getAllUsers() {
     try {
-      const usersDB = UsersModel.getAllUsers();
+      const usersDB = await UsersModel.getAllUsers();
       return usersDB;
     } catch (error) {
       throw error;
     }
   }
 
-  static getUserById(id: string) {
+  static async getUserById(id: string) {
     try {
-      const users = UsersModel.getAllUsers();
+      const users = await UsersModel.getAllUsers();
 
       const user = users.rows.find((user) => user.id === id);
 
@@ -28,9 +28,9 @@ class UsersService {
     }
   }
 
-  static createNewUser(user: UserSchema) {
+  static async createNewUser(user: UserSchema) {
     try {
-      const usersData = UsersService.getAllUsers();
+      const usersData = await UsersService.getAllUsers();
       const userId = uuid();
 
       //OBJETO DE LA DB ESTRUCTURADO POR PARTES
@@ -45,23 +45,12 @@ class UsersService {
         id: userId,
       });
 
-      UsersModel.writeUser(usersData);
+      UsersModel.writeUser(usersData); //chequeo si await o no
 
       return userId;
-    } catch (error) {}
-
-      // LLAMA A ZOD PARA VALIDAR //! ASÍ LO TENIA ANTES Y FUNCIONANDO
-    //   const users = UsersModel.getAllUsers();
-
-    //   data.id = uuid();
-
-    //   users.rows.push(data);
-
-    //   const createUser = UsersModel.writeUser(users);
-
-    //   if (!createUser) customError({ message: "User NOT CREATED", status: 404 });
-
-    //   return true;
+    } catch (error) {
+      throw error;
+    }
   }
 }
 
