@@ -4,7 +4,8 @@ import AuthService from "../services/auth";
 class AuthController {
   static async registerUser(req: Request, res: Response, next: NextFunction) {
     try {
-      await AuthService.registerUser(req.body);
+      const token = await AuthService.registerUser(req.body);
+      res.status(200).json({message: `USER REGISTERED SUCCESFULLY!✨USER_TOKEN:${token}`})
     } catch (error) {
       next(error);
     }

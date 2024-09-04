@@ -1,9 +1,9 @@
 import { writeFile, readFile } from "jsonfile";
 
-class AuthService {
+class AuthModel {
   static async readAuth() {
     try {
-      const dataAuth = await readFile("../database/auth.json");
+      const dataAuth = await readFile("./src/database/auth.json");
       return dataAuth;
     } catch (error) {
       throw error;
@@ -12,7 +12,7 @@ class AuthService {
 
   static async writeAuth(data) {
     try {
-      writeFile("../database/auth.json", data);
+      writeFile("./src/database/auth.json", data);
       return true;
     } catch (error) {
       throw error;
@@ -20,4 +20,4 @@ class AuthService {
   }
 }
 
-export default AuthService;
+export default AuthModel;
