@@ -4,8 +4,8 @@ import { readFile, writeFile } from "jsonfile";
 class UsersModel {
   static async getAllUsers() {
     try {
-      const dbUsers = await readFile("../database/users.json");
-      return dbUsers;
+      const dataUsers = await readFile("../database/users.json");
+      return dataUsers;
     } catch (error) {
       throw error;
     }

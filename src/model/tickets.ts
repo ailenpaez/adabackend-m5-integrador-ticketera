@@ -3,8 +3,8 @@ import { readFile, writeFile } from "jsonfile";
 class TicketsModel {
   static async getAllTickets() {
     try {
-      const allTickets = await readFile("../database/tickets.json");
-      return allTickets;
+      const dataTickets = await readFile("../database/tickets.json");
+      return dataTickets;
     } catch (error) {
       throw error;
     }
