@@ -6,7 +6,7 @@ class AuthController {
     try {
       const token = await AuthService.registerUser(req.body);
       res
-        .status(200)
+        .status(201)
         .json({ message: `USER REGISTERED SUCCESFULLY!✨USER_TOKEN:${token}` });
     } catch (error) {
       next(error);
