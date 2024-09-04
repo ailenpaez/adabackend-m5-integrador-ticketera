@@ -19,27 +19,45 @@ class AuthService {
         id: v4(),
       });
       const authDb = await AuthModel.readAuth();
-      const generateToken = createHash(v4())
+      const generateToken = createHash(v4());
 
       authDb.auth.push({
         id: v4(),
-        token: generateToken ,
+        token: generateToken,
         username: user.username,
-        password: createHash(user.password)
+        password: createHash(user.password),
       });
 
       AuthModel.writeAuth(authDb);
       return generateToken;
-
     } catch (error) {
       throw error;
     }
   }
 
-  static async loginUser(req: Request, res: Response, next: NextFunction) {
+  static async loginUser(dataUser: { username; password }) {
     try {
+      const user = await UsersService.getUserByUsername(dataUser.username);
+      const userAuth = await AuthService.getUserByUsername(user.username);
+      if (userAuth.password != createHash(dataUser.password)) {
+        throw new Error("USER_NOT_FOUND");
+      }
+      return userAuth.token;
     } catch (error) {
-      next(error);
+      throw error;
+    }
+  }
+
+  static async getUserByUsername(username) {
+    try {
+      const users = await AuthModel.readAuth();
+      const foundUser = users.auth.find((user) => user.username === username);
+      if (!foundUser) {
+        throw new Error("USER_NOT_FOUND");
+      }
+      return foundUser;
+    } catch (error) {
+      throw error;
     }
   }
 }

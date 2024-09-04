@@ -1,8 +1,7 @@
-//MODEL
-import { uuid } from "uuidv4";
 import UsersModel from "../model/users";
 import customError from "../utils/custom-error";
 import { UserSchema } from "../interfaces/userInterfaces";
+import { v4 } from "uuid";
 
 class UsersService {
   static async getAllUsers() {
@@ -14,15 +13,14 @@ class UsersService {
     }
   }
 
-  static async getUserById(id: string) {
+  static async getUserByUsername(username) {
     try {
-      const users = await UsersModel.getAllUsers();
-
-      const user = users.rows.find((user) => user.id === id);
-
-      if (!user) customError({ message: "User NOT found", status: 404 });
-
-      return user;
+      const users = await UsersService.getAllUsers();
+      const foundUser = users.rows.find((user) => user.username === username);
+      if (!foundUser) {
+        throw new Error("USER_NOT_FOUND");
+      }
+      return foundUser;
     } catch (error) {
       throw error;
     }
@@ -31,7 +29,7 @@ class UsersService {
   static async createNewUser(user: UserSchema) {
     try {
       const usersData = await UsersService.getAllUsers();
-      const userId = uuid();
+      const userId = v4();
 
       //OBJETO DE LA DB ESTRUCTURADO POR PARTES
       usersData.rows.push({

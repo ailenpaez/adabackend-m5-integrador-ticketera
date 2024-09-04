@@ -4,7 +4,7 @@ import { readFile, writeFile } from "jsonfile";
 class UsersModel {
   static async getAllUsers() {
     try {
-      const dataUsers = await readFile("./src/database/users.json");
+      const dataUsers = await readFile("./dist/database/users.json");
       return dataUsers;
     } catch (error) {
       throw error;
@@ -13,7 +13,7 @@ class UsersModel {
 
   static async writeUser(data) {
     try {
-      await writeFile("./src/database/users.json", data);
+      await writeFile("./dist/database/users.json", data);
       return true;
     } catch (error) {
       throw error;

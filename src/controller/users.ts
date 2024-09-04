@@ -4,6 +4,7 @@ import { Request, Response, NextFunction } from "express";
 
 import UsersService from "../services/users";
 import customError from "../utils/custom-error";
+import { userInfo } from "os";
 
 class UsersController {
   static async getAllUsers(req: Request, res: Response, next: NextFunction) {
@@ -16,18 +17,18 @@ class UsersController {
     }
   }
 
-  static async getUserById(req: Request, res: Response, next: NextFunction) {
-    try {
-      const { id } = req.params;
-      if (!id) customError({ message: "NOT SEND ID", status: 400 });
+  // static async getUserById(req: Request, res: Response, next: NextFunction) {
+  //   try {
+  //     const { id } = req.params;
+  //     if (!id) customError({ message: "NOT SEND ID", status: 400 });
 
-      const user = await UsersService.getUserById(id);
+  //     const user = await UsersService.getUserByUsername(userInfo);
 
-      res.status(200).json({ data: user });
-    } catch (error) {
-      next(error);
-    }
-  }
+  //     res.status(200).json({ data: user });
+  //   } catch (error) {
+  //     next(error);
+  //   }
+  // }
 
   static async createNewUser(req: Request, res: Response, next: NextFunction) {
     try {

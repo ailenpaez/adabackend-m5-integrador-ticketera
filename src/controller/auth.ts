@@ -5,7 +5,9 @@ class AuthController {
   static async registerUser(req: Request, res: Response, next: NextFunction) {
     try {
       const token = await AuthService.registerUser(req.body);
-      res.status(200).json({message: `USER REGISTERED SUCCESFULLY!✨USER_TOKEN:${token}`})
+      res
+        .status(200)
+        .json({ message: `USER REGISTERED SUCCESFULLY!✨USER_TOKEN:${token}` });
     } catch (error) {
       next(error);
     }
@@ -13,6 +15,8 @@ class AuthController {
 
   static async loginUser(req: Request, res: Response, next: NextFunction) {
     try {
+      const token = await AuthService.loginUser(req.body);
+      res.status(200).json({ message: `WELCOME!✨USER_TOKEN:${token}` });
     } catch (error) {
       next(error);
     }
