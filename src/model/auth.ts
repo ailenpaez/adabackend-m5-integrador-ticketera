@@ -1,19 +1,22 @@
-import { writeFileSync, readFileSync } from "jsonfile";
+import { writeFile, readFile } from "jsonfile";
 
 class AuthService {
-  static readAuth() {
+  static async readAuth() {
     try {
-      const dataAuth = readFileSync("/src/database/auth.json");
+      const dataAuth = await readFile("../database/auth.json");
       return dataAuth;
     } catch (error) {
       throw error;
     }
   }
 
-  static writeAuth(data) {
+  static async writeAuth(data) {
     try {
-      writeFileSync("/src/database/auth.json", data);
-    } catch (error) {}
+      writeFile("../database/auth.json", data);
+      return true;
+    } catch (error) {
+      throw error;
+    }
   }
 }
 

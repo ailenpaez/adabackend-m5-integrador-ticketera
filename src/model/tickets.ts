@@ -1,16 +1,22 @@
-import { Request, Response } from "express";
+import { readFile, writeFile } from "jsonfile";
 
 class TicketsModel {
-  static getAllTickets(req: Request, res: Response) {
+  static async getAllTickets() {
     try {
+      const allTickets = await readFile("../database/tickets.json");
+      return allTickets;
     } catch (error) {
       throw error;
     }
   }
 
-  static writeTicket(req: Request, res: Response) {
+  static async writeTicket(data) {
     try {
-    } catch (error) {}
+      await writeFile("../database/tickets.json", data);
+      return true;
+    } catch (error) {
+      throw error;
+    }
   }
 }
 

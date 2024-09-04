@@ -1,14 +1,23 @@
 import users from "../database/users.json";
-import { writeFile } from "jsonfile";
+import { readFile, writeFile } from "jsonfile";
 
 class UsersModel {
-  static getAllUsers() {
-    return users;
+  static async getAllUsers() {
+    try {
+      const dbUsers = await readFile("../database/users.json");
+      return dbUsers;
+    } catch (error) {
+      throw error;
+    }
   }
 
-  static writeUser(data) {
-    writeFile("./src/database/users.json", data);
-    return true;
+  static async writeUser(data) {
+    try {
+      await writeFile("./src/database/users.json", data);
+      return true;
+    } catch (error) {
+      throw error;
+    }
   }
 }
 
