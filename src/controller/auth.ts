@@ -2,15 +2,15 @@ import { Request, Response, NextFunction } from "express";
 import AuthService from "../services/auth";
 
 class AuthController {
-  static registerUser(req: Request, res: Response, next: NextFunction) {
+  static async registerUser(req: Request, res: Response, next: NextFunction) {
     try {
-      AuthService.registerUser(req.body);
+      await AuthService.registerUser(req.body);
     } catch (error) {
       next(error);
     }
   }
 
-  static loginUser(req: Request, res: Response, next: NextFunction) {
+  static async loginUser(req: Request, res: Response, next: NextFunction) {
     try {
     } catch (error) {
       next(error);

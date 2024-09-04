@@ -2,21 +2,25 @@ import { Request, Response, NextFunction } from "express";
 import ticketsServices from "../services/tickets";
 
 class TicketsController {
-  static getAllTickets(req: Request, res: Response, next: NextFunction) {
+  static async getAllTickets(req: Request, res: Response, next: NextFunction) {
     try {
+      await ticketsServices.getAllTickets();
     } catch (error) {}
   }
 
-  static createTicket(req: Request, res: Response, next: NextFunction) {
+  static async createTicket(req: Request, res: Response, next: NextFunction) {
     try {
+      await ticketsServices.createTicket(req.body);
     } catch (error) {}
   }
-  static updateTicket(req: Request, res: Response, next: NextFunction) {
+  static async updateTicket(req: Request, res: Response, next: NextFunction) {
     try {
+      await ticketsServices.updateTicket(req.params.id, req.body);
     } catch (error) {}
   }
-  static deleteTicket(req: Request, res: Response, next: NextFunction) {
+  static async deleteTicket(req: Request, res: Response, next: NextFunction) {
     try {
+      await ticketsServices.deleteTicket(req.params.id);
     } catch (error) {}
   }
 }

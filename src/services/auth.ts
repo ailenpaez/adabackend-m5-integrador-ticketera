@@ -5,7 +5,7 @@ import { UserSchema } from "../interfaces/userInterfaces";
 class AuthService {
   static async registerUser(user: UserSchema) {
     try {
-     await UsersService.createNewUser(user);
+      await UsersService.createNewUser(user);
     } catch (error) {
       throw error;
     }
