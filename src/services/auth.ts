@@ -11,7 +11,7 @@ class AuthService {
       const userId = await UsersService.createNewUser({
         username: user.username,
         email: user.email,
-        password: createHash(user.password),
+        password: createHash(user.password), //!cambiadito primero
         level: user.level,
         status: user.status,
         position: user.position,

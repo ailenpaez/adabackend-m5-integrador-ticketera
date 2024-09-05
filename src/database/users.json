@@ -1,130 +1,14 @@
 {
   "rows": [
     {
-      "username": "GasparP",
+      "username": "paezailen",
       "email": "usuario@empresa.com",
-      "password": "123abc",
+      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
       "level": 2,
       "status": "active",
-      "position": ["support", "developer"],
+      "position": ["support", "QA"],
       "country": "ARG",
-      "id": "27102009"
-    },
-    {
-      "username": "TomasP",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 2,
-      "status": "active",
-      "position": ["support", "developer"],
-      "country": "ARG",
-      "id": "20091995"
-    },
-    {
-      "username": "AilenP",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 2,
-      "status": "active",
-      "position": ["support"],
-      "country": "ARG",
-      "id": "30091990"
-    },
-    {
-      "username": "ClaraT",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 2,
-      "status": "active",
-      "position": ["support", "frontend"],
-      "country": "ARG",
-      "id": "8c3061f0-0164-4245-a8c4-71db191d736f"
-    },
-    {
-      "username": "SimonT",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 3,
-      "status": "active",
-      "position": ["support", "frontend"],
-      "country": "ARG",
-      "id": "af2c25e1-8a45-4725-b0b0-e19d2127ce8a"
-    },
-    {
-      "username": "SaschaT",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 5,
-      "status": "active",
-      "position": ["support", "Fullstack"],
-      "country": "ARG",
-      "id": "60fd2320-32a7-4913-9a6e-256f6e0779c0"
-    },
-    {
-      "username": "MicaelaG",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 3,
-      "status": "active",
-      "position": ["UX/UI", "Graphics"],
-      "country": "ARG",
-      "id": "f7eaed6d-4123-441e-80d8-3f7d8b3962f4"
-    },
-    {
-      "username": "JorgeP",
-      "email": "usuario@empresa.com",
-      "password": "123abc",
-      "level": 3,
-      "status": "active",
-      "position": ["Techniques", "Repairs"],
-      "country": "ARG",
-      "id": "95bcf5f2-8e56-4b02-bd0e-4e1a50227f2d"
-    },
-    {
-      "username": "tuVieja",
-      "email": "papita@gmail.com",
-      "password": "123456",
-      "id": "ff324af2-240b-457f-b339-1e4d5f287b3e"
-    },
-    {
-      "username": "tuvieja",
-      "password": "123456",
-      "id": "adcdcbae-122f-4fb8-8168-75363e384b0f"
-    },
-    {
-      "username": "holaa",
-      "password": "123456",
-      "id": "da5e27ea-97cd-42c8-bd5a-f7e5723b5e74"
-    },
-    {
-      "username": "holaa",
-      "password": "123456",
-      "id": "91485174-f037-47e2-9c74-2f38087727ef"
-    },
-    {
-      "username": "pepita",
-      "password": "123456",
-      "id": "4e0be037-9db2-4b73-8bd9-a26c0acba9ed"
-    },
-    {
-      "username": "pepita",
-      "password": "123456",
-      "id": "16ef37bf-aa5a-41f5-a4aa-299a2c2be061"
-    },
-    {
-      "username": "tututu",
-      "password": "123456",
-      "id": "f9ad4909-a313-4285-8576-7df46930c485"
-    },
-    {
-      "username": "holag",
-      "password": "123456",
-      "id": "f725361c-7bac-4475-a19a-9e43226ce36f"
-    },
-    {
-      "username": "maria",
-      "password": "123456",
-      "id": "b28c2845-deb9-488e-9eda-80f37fd7b95b"
+      "id": "beba668c-7231-4134-9e9c-c1b42f17991c"
     }
   ]
 }

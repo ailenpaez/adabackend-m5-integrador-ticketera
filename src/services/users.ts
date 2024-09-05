@@ -3,6 +3,8 @@ import customError from "../utils/custom-error";
 import { UserSchema } from "../interfaces/userInterfaces";
 import { v4 } from "uuid";
 
+import createHash from "../utils/createHash";
+
 class UsersService {
   static async getAllUsers() {
     try {
@@ -38,7 +40,7 @@ class UsersService {
       usersData.rows.push({
         username: user.username,
         email: user.email,
-        password: user.password,
+        password:createHash(user.password), //!cambio
         level: user.level,
         status: user.status,
         position: user.position,
