@@ -18,7 +18,10 @@ class UsersService {
       const users = await UsersService.getAllUsers();
       const foundUser = users.rows.find((user) => user.username === username);
       if (!foundUser) {
-        throw new Error("USER_NOT_FOUND");
+        const error = new Error("USER_NOT_FOUND");
+        error["statusCode"] = 404;
+
+        throw error;
       }
       return foundUser;
     } catch (error) {

@@ -11,11 +11,11 @@ class AuthService {
       const userId = await UsersService.createNewUser({
         username: user.username,
         email: user.email,
-        password: user.password,
-        // level: user.level,
-        // status: user.status,
-        // position: user.position,
-        // country: user.country,
+        password: createHash(user.password),
+        level: user.level,
+        status: user.status,
+        position: user.position,
+        country: user.country,
         id: v4(),
       });
       const authDb = await AuthModel.readAuth();
