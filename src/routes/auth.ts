@@ -4,13 +4,9 @@ import AuthController from "../controller/auth";
 const authRouter = Router();
 
 // ACÁ VA LO QUE NECESITA AUTH (REGISTRO,LOGIN,LOGOUT,DELETEUSER,UPDATEUSER)
-authRouter.post(
-  "/register",
-  (req: Request, res: Response, next: NextFunction) => {
-    AuthController.registerUser(req, res, next);
-  }
-);
-authRouter.post("/login", (req: Request, res: Response, next: NextFunction) => {
-  AuthController.loginUser(req, res, next);
-});
+authRouter.post("/register", AuthController.registerUser); //CREATE
+
+authRouter.post("/login", AuthController.loginUser); //CREATE en AUTH
+
+
 export default authRouter;

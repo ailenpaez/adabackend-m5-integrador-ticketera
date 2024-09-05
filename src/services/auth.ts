@@ -39,8 +39,12 @@ class AuthService {
     try {
       const user = await UsersService.getUserByUsername(dataUser.username);
       const userAuth = await AuthService.getUserByUsername(user.username);
+
       if (userAuth.password != createHash(dataUser.password)) {
-        throw new Error("USER_NOT_FOUND");
+        const error = new Error("INCORRECT_PASSWORD⛔");
+        error["statusCode"] = 400;
+
+        throw error;
       }
       return userAuth.token;
     } catch (error) {
@@ -53,7 +57,11 @@ class AuthService {
       const users = await AuthModel.readAuth();
       const foundUser = users.auth.find((user) => user.username === username);
       if (!foundUser) {
-        throw new Error("USER_NOT_FOUND");
+        const error = new Error("USER_NOT_FOUND");
+
+        error["statusCode"] = 404;
+
+        throw error;
       }
       return foundUser;
     } catch (error) {
