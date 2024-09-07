@@ -1,7 +1,7 @@
 <h1 align="center"> DESAFÍO INTEGRADOR - MÓDULO 5 </h1>
 <h3 align="center"> RESTful API </h3>
 
-![INTRO](https://pbs.twimg.com/media/GW2rXvbWUAARLOO?format=jpg&name=large)
+![INTRO](https://pbs.twimg.com/media/GW2vPJ7WQAAZCNN?format=png&name=4096x4096)
 
 ## 🔸 Introducción:
 
