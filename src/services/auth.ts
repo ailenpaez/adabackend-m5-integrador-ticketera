@@ -94,7 +94,7 @@ class AuthService {
     }
   }
 
-  static async deleteTicketById(id:string) {
+  static async deleteUserById(id:string) {
     try {
       const udb = await UsersModel.getAllUsers();
 

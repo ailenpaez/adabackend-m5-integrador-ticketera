@@ -9,7 +9,7 @@ const ticketSchema = z.object({
   description: z.string().min(500),
   link: z.string().url(),
   evidence: z.array(z.string()),
-  status: z.enum(["pending", "done"]),
+  status: z.enum(["pending","done"]),
 });
 
 const validateTicket = (obj: any) => ticketSchema.safeParse(obj);

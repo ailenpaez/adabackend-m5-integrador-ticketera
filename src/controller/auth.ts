@@ -56,7 +56,7 @@ class AuthController {
 
   static async deleteUser(req: Request, res: Response, next: NextFunction) {
     try {
-      const data = await AuthService.deleteTicketById(req.params.id);
+      const data = await AuthService.deleteUserById(req.params.id);
       res.status(200).json({ message: "USER_DELETED_SUCCESSFULLY" });
     } catch (error) {
       next(error);
