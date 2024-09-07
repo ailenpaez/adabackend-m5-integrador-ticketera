@@ -1,8 +1,8 @@
 # Trabajo integrador - módulo 5 : Api Rest.
 
-<img src="https://pbs.twimg.com/media/GW2wv3XWUAAL6sm?format=jpg&name=medium" alt="Descripción de la imagen" width="300">
-
-
+<p align="center">
+    <img src="https://pbs.twimg.com/media/GW2wv3XWUAAL6sm?format=jpg&name=medium" alt="INTRO" width="300">
+</p>
 
 
 ## 🔸 Introducción:
