@@ -1,12 +1,13 @@
 import { Request, Response, NextFunction } from "express";
-import { UserSchema } from "../interfaces/userInterfaces";
+import { User } from "../interfaces/userInterfaces";
 import { v4 } from "uuid";
 import UsersService from "./users";
 import AuthModel from "../model/auth";
 import createHash from "../utils/createHash";
+import UsersModel from "../model/users";
 
 class AuthService {
-  static async registerUser(user: UserSchema) {
+  static async registerUser(user: User) {
     try {
       const userId = await UsersService.createNewUser({
         username: user.username,
@@ -69,6 +70,51 @@ class AuthService {
     }
   }
 
+  static async logoutUser() {}
+
+  static async updateUserById(id: string, data: User) {
+    try {
+      const udb = await UsersModel.getAllUsers();
+      const userUpdate = udb.rows.findIndex((user) => user.id === id);
+
+      if (userUpdate === -1) {
+        const error = new Error("USER_NOT_FOUND");
+        error["statusCode"] = 404;
+        throw error;
+      }
+      const currentUser = udb.rows[userUpdate];
+
+      udb.rows[userUpdate] = { ...currentUser, ...data };
+
+      await UsersModel.writeUser(udb);
+
+      return udb.rows[userUpdate];
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  static async deleteTicketById(id:string) {
+    try {
+      const udb = await UsersModel.getAllUsers();
+
+      const filteredUsers = udb.rows.filter((user) => user.id !== id);
+
+      if (udb.rows.length === filteredUsers.length) {
+        const error = new Error("USER_NOT_FOUND");
+        error["statusCode"] = 404;
+        throw error;
+      }
+
+      udb.rows = filteredUsers;
+
+      await UsersModel.writeUser(udb);
+
+      return { message: "USER_DELETED_SUCCESSFULLY" };
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 export default AuthService;

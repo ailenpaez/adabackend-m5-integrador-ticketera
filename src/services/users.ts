@@ -1,6 +1,6 @@
 import UsersModel from "../model/users";
 import customError from "../utils/custom-error";
-import { UserSchema } from "../interfaces/userInterfaces";
+import { User } from "../interfaces/userInterfaces";
 import { v4 } from "uuid";
 
 import createHash from "../utils/createHash";
@@ -30,6 +30,7 @@ class UsersService {
       throw error;
     }
   }
+  
   static async getUserById(id: string) {
     try {
       const users = await UsersModel.getAllUsers();
@@ -49,7 +50,7 @@ class UsersService {
   }
 
   //CREATE
-  static async createNewUser(user: UserSchema) {
+  static async createNewUser(user: User) {
     try {
       const usersData = await UsersService.getAllUsers();
       const userId = v4();

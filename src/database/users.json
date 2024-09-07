@@ -1,16 +1,6 @@
 {
   "rows": [
     {
-      "username": "paezailen",
-      "email": "usuario@empresa.com",
-      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
-      "level": 2,
-      "status": "active",
-      "position": ["support", "QA"],
-      "country": "ARG",
-      "id": "34"
-    },
-    {
       "username": "liomessi",
       "email": "usuario@empresa.com",
       "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
@@ -19,16 +9,6 @@
       "position": ["support", "frontend"],
       "country": "ARG",
       "id": "6eb5666a-a50b-4c28-b78f-2be1decf9ae6"
-    },
-    {
-      "username": "liomessilio",
-      "email": "usuario@empresa.com",
-      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
-      "level": 2,
-      "status": "active",
-      "position": ["support", "frontend"],
-      "country": "ARG",
-      "id": "af705ca6-942b-4bfc-8011-7eca527f4ab4"
     }
   ]
 }
