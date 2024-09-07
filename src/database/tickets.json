@@ -1,16 +1,37 @@
 {
   "tickets": [
     {
-      "ticket-id": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "ticketId": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
       "username": "gasparP",
       "date": "2024-09-03T10:15:30Z",
-      "area":["frontend","backend"],
+      "area": ["frontend", "backend"],
       "bugType": "Error de interfaz de usuario",
       "description": "El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.",
       "link": "https://github.com/",
-      "evidence":[],
-      "status":"waiting"
-      
+      "evidence": [],
+      "status": "waiting"
+    },
+    {
+      "ticketId": "1",
+      "username": "gasparP",
+      "date": "2024-09-03T10:15:30Z",
+      "area": ["frontend", "backend"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.",
+      "link": "https://github.com/",
+      "evidence": [],
+      "status": "waiting"
+    },
+    {
+      "ticketId": "7",
+      "username": "gasparP",
+      "date": "2024-09-03T10:15:30Z",
+      "area": ["frontend", "backend"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.",
+      "link": "https://github.com/",
+      "evidence": [],
+      "status": "waiting"
     }
   ]
 }
