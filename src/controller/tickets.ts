@@ -56,7 +56,7 @@ class TicketsController {
     try {
       const data = await ticketsServices.deleteTicketById(req.params.id);
 
-      res.status(200).json({ message: "TICKEt_DELETED:SUCCESSFULLY" });
+      res.status(200).json({ message: "TICKET_DELETED_SUCCESSFULLY" });
     } catch (error) {}
   }
 }
