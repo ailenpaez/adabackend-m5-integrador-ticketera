@@ -7,6 +7,7 @@ import customError from "../utils/custom-error";
 import { userInfo } from "os";
 
 class UsersController {
+  
   static async getAllUsers(req: Request, res: Response, next: NextFunction) {
     try {
       const users = await UsersService.getAllUsers();
@@ -17,18 +18,21 @@ class UsersController {
     }
   }
 
-  // static async getUserById(req: Request, res: Response, next: NextFunction) {
-  //   try {
-  //     const { id } = req.params;
-  //     if (!id) customError({ message: "NOT SEND ID", status: 400 });
+  static async getUserByUsername(req: Request, res: Response, next: NextFunction) {
+    try {
+      const { username } = req.params;
+      
+      if (!username) {
+        throw customError({ message: "USERNAME_NOT_PROVIDED", status: 400 });
+      }
 
-  //     const user = await UsersService.getUserByUsername(userInfo);
+      const user = await UsersService.getUserByUsername(username);
 
-  //     res.status(200).json({ data: user });
-  //   } catch (error) {
-  //     next(error);
-  //   }
-  // }
+      res.status(200).json({ user });
+    } catch (error) {
+      next(error); 
+    }
+  }
 
   static async createNewUser(req: Request, res: Response, next: NextFunction) {
     try {

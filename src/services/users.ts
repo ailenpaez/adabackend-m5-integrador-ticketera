@@ -14,7 +14,7 @@ class UsersService {
       throw error;
     }
   }
-
+//READ
   static async getUserByUsername(username) {
     try {
       const users = await UsersService.getAllUsers();
@@ -30,7 +30,7 @@ class UsersService {
       throw error;
     }
   }
-
+//CREATE
   static async createNewUser(user: UserSchema) {
     try {
       const usersData = await UsersService.getAllUsers();
@@ -55,6 +55,7 @@ class UsersService {
       throw error;
     }
   }
+
 }
 
 export default UsersService;

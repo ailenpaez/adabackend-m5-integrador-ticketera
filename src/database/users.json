@@ -9,6 +9,16 @@
       "position": ["support", "QA"],
       "country": "ARG",
       "id": "beba668c-7231-4134-9e9c-c1b42f17991c"
+    },
+    {
+      "username": "liomessi",
+      "email": "usuario@empresa.com",
+      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "6eb5666a-a50b-4c28-b78f-2be1decf9ae6"
     }
   ]
 }
