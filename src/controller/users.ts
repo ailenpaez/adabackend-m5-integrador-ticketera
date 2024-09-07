@@ -17,7 +17,7 @@ class UsersController {
       next(error);
     }
   }
-
+//ver cual es más conveniente usar
   static async getUserByUsername(req: Request, res: Response, next: NextFunction) {
     try {
       const { username } = req.params;
@@ -29,6 +29,22 @@ class UsersController {
       const user = await UsersService.getUserByUsername(username);
 
       res.status(200).json({ user });
+    } catch (error) {
+      next(error); 
+    }
+  }
+
+  static async getUserById(req: Request, res: Response, next: NextFunction) {
+    try {
+      const { id } = req.params;
+      
+      if (!id) {
+        return res.status(400).json({ message: "ID_NOT_PROVIDED" });
+      }
+
+      const user = await UsersService.getUserById(id);
+
+      res.status(200).json({ message: "USER_FOUND", user });
     } catch (error) {
       next(error); 
     }

@@ -1,6 +1,6 @@
 export interface BugTicket {
   ticketId: string; 
-  username?: string; // Username de quien reporta
+  username?: string; 
   date: string; 
   area: string[]; 
   bugType: string; 

@@ -14,7 +14,7 @@ class UsersService {
       throw error;
     }
   }
-//READ
+  //READ - ver cual conviene más
   static async getUserByUsername(username) {
     try {
       const users = await UsersService.getAllUsers();
@@ -30,7 +30,25 @@ class UsersService {
       throw error;
     }
   }
-//CREATE
+  static async getUserById(id: string) {
+    try {
+      const users = await UsersModel.getAllUsers();
+
+      const foundUser = users.rows.find((user) => user.id === id);
+
+      if (!foundUser) {
+        const error = new Error("USER_NOT_FOUND");
+        error["statusCode"] = 404;
+        throw error;
+      }
+
+      return foundUser;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  //CREATE
   static async createNewUser(user: UserSchema) {
     try {
       const usersData = await UsersService.getAllUsers();
@@ -40,7 +58,7 @@ class UsersService {
       usersData.rows.push({
         username: user.username,
         email: user.email,
-        password:createHash(user.password), //!cambio
+        password: createHash(user.password), //!cambio
         level: user.level,
         status: user.status,
         position: user.position,
@@ -55,7 +73,6 @@ class UsersService {
       throw error;
     }
   }
-
 }
 
 export default UsersService;

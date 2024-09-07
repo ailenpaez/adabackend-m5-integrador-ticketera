@@ -8,7 +8,9 @@ class TicketsController {
       const data = await ticketsServices.getAllTickets();
 
       res.status(200).json({ message: data });
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   }
 
   static async getTicketbyId(req: Request, res: Response, next: NextFunction) {
@@ -23,7 +25,7 @@ class TicketsController {
 
       res.status(200).json({ ticket });
     } catch (error) {
-      next(error); // pasa el error al middleware errorHandler
+      next(error);
     }
   }
 
@@ -31,8 +33,11 @@ class TicketsController {
     try {
       const data = await ticketsServices.createTicket(req.body);
       res.status(201).json({ data: data });
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   }
+
   static async updateTicketById(
     req: Request,
     res: Response,
@@ -45,8 +50,11 @@ class TicketsController {
       );
 
       res.status(200).json({ message: "TICKET_UPDATE:SUCCESSFULLY" });
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   }
+  
   static async deleteTicketbyId(
     req: Request,
     res: Response,
@@ -56,7 +64,9 @@ class TicketsController {
       const data = await ticketsServices.deleteTicketById(req.params.id);
 
       res.status(200).json({ message: "TICKET_DELETED_SUCCESSFULLY" });
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   }
 }
 
