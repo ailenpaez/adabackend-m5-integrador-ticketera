@@ -1,7 +1,10 @@
 <h1 align="center"> DESAFÍO INTEGRADOR - MÓDULO 5 </h1>
 <h3 align="center"> RESTful API </h3>
 
-![INTRO](https://pbs.twimg.com/media/GW2wv3XWUAAL6sm?format=jpg&name=medium)
+<div style="text-align: center;">
+    <img src="https://pbs.twimg.com/media/GW2wv3XWUAAL6sm?format=jpg&name=medium" alt="Descripción de la imagen" width="350">
+</div>
+
 
 ## 🔸 Introducción:
 
@@ -16,11 +19,11 @@ A partir de esas consultas, se devolverá un resultado. Este puede ser positivo 
 
  Para ejecutar estos procesos, poder ver la información solicitada y realizar las distintas acciones del sistema, debemos levantar la relación servidor/cliente con un comando de node. Aquí se podrán apreciar los comandos de ejecución que se enviarán por la  consola:
  
-| 🛡️ COMANDO DE EJECUCIÓN | TIPO DE EJECUCIÓN     | 
-| -------------------- | :-----------------:   | 
-| npm run build        | Transpilación a js    |       
-| npm run dev          | Levanta el servidor   |       
-| npm run client       |Levanta el client      |       
+| 🛡️ COMANDO DE EJECUCIÓN |  TIPO DE EJECUCIÓN  |
+| ---------------------- | :-----------------: |
+| npm run build          | Transpilación a js  |
+| npm run dev            | Levanta el servidor |
+| npm run client         |  Levanta el client  |
 
 ### 📍 INSTRUCCIONES PARA EL USUARIO.
 
