@@ -14,19 +14,18 @@ class TicketsController {
   static async getTicketbyId(req: Request, res: Response, next: NextFunction) {
     try {
       const { id } = req.params;
-  
+
       if (!id) {
         throw customError({ message: "ID_NOT_PROVIDED", status: 400 });
       }
-  
+
       const ticket = await ticketsServices.getTicketById(id);
-  
+
       res.status(200).json({ ticket });
     } catch (error) {
       next(error); // pasa el error al middleware errorHandler
     }
   }
-  
 
   static async createTicket(req: Request, res: Response, next: NextFunction) {
     try {

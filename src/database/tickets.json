@@ -17,10 +17,10 @@
       "date": "2024-09-03T10:15:30Z",
       "area": ["frontend", "backend"],
       "bugType": "Error de interfaz de usuario",
-      "description": "El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.",
+      "description": "LALALALALALALALA.",
       "link": "https://github.com/",
       "evidence": [],
-      "status": "waiting"
+      "status": "ready"
     },
     {
       "ticketId": "7",
@@ -32,6 +32,28 @@
       "link": "https://github.com/",
       "evidence": [],
       "status": "waiting"
+    },
+    {
+      "ticketId": "b83dfa29-df46-436c-9691-45a80264957d",
+      "username": "liomessi",
+      "date": "7/9/2024 - 00.30am",
+      "area": ["frontend", "landing page"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "No es responsive",
+      "link": "https://github.com/",
+      "evidence": ["foto", "video"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "bde14bcf-44b3-41d4-a3c8-160a33457fb3",
+      "username": "dibumartinez",
+      "date": "7/9/2024 - 00.36am",
+      "area": ["frontend", "landing page"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "No es responsive",
+      "link": "https://github.com/",
+      "evidence": ["foto", "video"],
+      "status": "pending"
     }
   ]
 }
