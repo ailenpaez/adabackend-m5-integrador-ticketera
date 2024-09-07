@@ -3,14 +3,23 @@ import TicketsModel from "../model/tickets";
 import { BugTicket } from "../interfaces/ticketInterfaces";
 
 class TicketsServices {
-  static async getAllTickets() {
+  //implemento qp
+  static async getAllTickets(where) {
     try {
-      const dataTickets = await TicketsModel.getAllTickets();
-      return dataTickets.tickets;
+      const { tickets } = await TicketsModel.getAllTickets();
+
+      if (!where.status) return tickets;
+
+      const ticketsFiltered = tickets.filter((ticket) =>
+        ticket.status.includes(where.status)
+      );
+
+      return ticketsFiltered;
     } catch (error) {
       throw error;
     }
   }
+
   // CREATE
   static async createTicket(bug: BugTicket) {
     try {
@@ -59,49 +68,33 @@ class TicketsServices {
       throw error;
     }
   }
-  //UPDATE 
+
+  //UPDATE
   static async updateTicketById(id: string, data: BugTicket) {
     try {
       const tdb = await TicketsModel.getAllTickets();
-  
-      const ticket = tdb.tickets.find((ticket) => ticket.ticketId === id);
-      if (!ticket) {
+
+      const ticketUpdate = tdb.tickets.findIndex(
+        (ticket) => ticket.ticketId === id
+      );
+
+      if (ticketUpdate === -1) {
         const error = new Error("TICKET_NOT_FOUND");
         error["statusCode"] = 404;
         throw error;
       }
-  
-      if (data.description) {
-        ticket.description = data.description;
-      }
-  
-      if (data.status) {
-        ticket.status = data.status;
-      }
-  
-      if (data.area) {
-        ticket.area = data.area;
-      }
-  
-      if (data.bugType) {
-        ticket.bugType = data.bugType;
-      }
-  
-      if (data.evidence) {
-        ticket.evidence = data.evidence;
-      }
-  
-      if (data.link) {
-        ticket.link = data.link;
-      }
-  
+      const currentTicket = tdb.tickets[ticketUpdate];
+
+      tdb.tickets[ticketUpdate] = { ...currentTicket, ...data };
+
       await TicketsModel.writeTicket(tdb);
-      
-      return ticket; // ticket actualizado
+
+      return tdb.tickets[ticketUpdate];
     } catch (error) {
       throw error;
     }
   }
+
   //DELETE
   static async deleteTicketById(id) {
     try {

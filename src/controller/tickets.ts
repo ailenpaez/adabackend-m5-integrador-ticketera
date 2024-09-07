@@ -5,7 +5,7 @@ import customError from "../utils/custom-error";
 class TicketsController {
   static async getAllTickets(req: Request, res: Response, next: NextFunction) {
     try {
-      const data = await ticketsServices.getAllTickets();
+      const data = await ticketsServices.getAllTickets(req.query);//query params
 
       res.status(200).json({ message: data });
     } catch (error) {
@@ -49,7 +49,7 @@ class TicketsController {
         req.body
       );
 
-      res.status(200).json({ message: "TICKET_UPDATE:SUCCESSFULLY" });
+      res.status(200).json({ message: "TICKET_UPDATE_SUCCESSFULLY" });
     } catch (error) {
       next(error);
     }
