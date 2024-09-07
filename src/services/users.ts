@@ -10,8 +10,20 @@ class UsersService {
   static async getAllUsers() {
     try {
       const usersDB = await UsersModel.getAllUsers();
+      return usersDB
+      // //no muestra info sensible
+      // const mappedUsers = usersDB.rows.map(({ password, status, ...showInfo }) => showInfo);
   
-      //no muestra info sensible
+      // return mappedUsers;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+      //no muestra info sensible en el endpoint getallusers
+  static async getInfoUsers() {
+    try {
+      const usersDB = await UsersModel.getAllUsers();
       const mappedUsers = usersDB.rows.map(({ password, status, ...showInfo }) => showInfo);
   
       return mappedUsers;
@@ -30,6 +42,8 @@ class UsersService {
         error["statusCode"] = 404;
         throw error;
       }
+
+      // return foundUser
       const { password, email, ...visibleUser } = foundUser; //evita info sensible
 
       return visibleUser;

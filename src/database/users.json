@@ -1,24 +1,14 @@
 {
   "rows": [
     {
-      "username": "liomessi",
+      "username": "ailenp",
       "email": "usuario@empresa.com",
       "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
       "level": 2,
       "status": "active",
       "position": ["support", "frontend"],
       "country": "ARG",
-      "id": "101"
-    },
-    {
-      "username": "liomessi",
-      "email": "usuario@empresa.com",
-      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
-      "level": 2,
-      "status": "active",
-      "position": ["support", "frontend"],
-      "country": "ARG",
-      "id": "103"
+      "id": "4dd95472-1e82-4709-9907-0d91f33ed233"
     }
   ]
 }

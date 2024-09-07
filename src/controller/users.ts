@@ -17,6 +17,16 @@ class UsersController {
       next(error);
     }
   }
+
+  static async getInfoUsers(req: Request, res: Response, next: NextFunction) {
+    try {
+      const users = await UsersService.getInfoUsers();
+
+      res.status(200).json({ data: users });
+    } catch (error) {
+      next(error);
+    }
+  }
 //ver cual es más conveniente usar
   static async getUserByUsername(req: Request, res: Response, next: NextFunction) {
     try {
