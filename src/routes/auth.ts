@@ -6,7 +6,7 @@ const authRouter = Router();
 
 authRouter.post("/register", AuthController.registerUser);
 authRouter.post("/login", AuthController.loginUser);
-authRouter.post("/logout", AuthController.logoutUser); //!FALTA
+authRouter.post("/logout", AuthController.logoutUser); 
 authRouter.patch("/:id", checkToken, AuthController.updateUser);
 authRouter.delete("/:id", checkToken, AuthController.deleteUser);
 

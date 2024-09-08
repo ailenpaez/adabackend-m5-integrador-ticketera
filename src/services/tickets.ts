@@ -7,7 +7,6 @@ import {
 } from "../validators/ticketValidatos";
 
 class TicketsServices {
-  //implemento qp
   static async getAllTickets(where) {
     try {
       const { tickets } = await TicketsModel.getAllTickets();
@@ -24,7 +23,6 @@ class TicketsServices {
     }
   }
 
-  // CREATE
   static async createTicket(bug: BugTicket) {
     try {
       const ticketId = v4();
@@ -46,7 +44,7 @@ class TicketsServices {
         const errorMessages = validation.error.issues
           .map((issue) => issue.message)
           .join(", ");
-        throw new Error(`VALIDATION_ERROR: ${errorMessages}`);
+        throw new Error(`VALIDATION_ERROR👎🏼: ${errorMessages}`);
       }
 
       const dbTicket = await TicketsModel.getAllTickets();
@@ -59,16 +57,15 @@ class TicketsServices {
     }
   }
 
-  //READ
   static async getTicketById(id: string) {
     try {
       const data = await TicketsModel.getAllTickets();
-      const tickets = data.tickets; // array de tickets
+      const tickets = data.tickets; 
 
       const ticketFound = tickets.find((ticket) => ticket.ticketId === id);
 
       if (!ticketFound) {
-        const error = new Error("TICKET_NOT_FOUND");
+        const error = new Error("TICKET_NOT_FOUND🙄");
         error["statusCode"] = 404;
 
         throw error;
@@ -80,7 +77,6 @@ class TicketsServices {
     }
   }
 
-//UPDATE
   static async updateTicketById(id: string, data) {
     try {
       const validation = validatePartialTicket(data);
@@ -89,7 +85,7 @@ class TicketsServices {
         const errorMessages = validation.error.issues
           .map((issue) => issue.message)
           .join(", ");
-        throw new Error(`VALIDATION_ERROR: ${errorMessages}`);
+        throw new Error(`VALIDATION_ERROR👎🏼: ${errorMessages}`);
       }
 
       const tdb = await TicketsModel.getAllTickets();
@@ -99,7 +95,7 @@ class TicketsServices {
       );
 
       if (ticketUpdateIndex === -1) {
-        const error = new Error("TICKET_NOT_FOUND");
+        const error = new Error("TICKET_NOT_FOUND🙄");
         error["statusCode"] = 404;
         throw error;
       }
@@ -117,7 +113,6 @@ class TicketsServices {
     }
   }
 
-  //DELETE
   static async deleteTicketById(id) {
     try {
       const tdb = await TicketsModel.getAllTickets();
@@ -127,7 +122,7 @@ class TicketsServices {
       );
 
       if (tdb.tickets.length === filteredTickets.length) {
-        const error = new Error("TICKET_NOT_FOUND");
+        const error = new Error("TICKET_NOT_FOUND🙄");
         error["statusCode"] = 404;
         throw error;
       }
@@ -136,7 +131,7 @@ class TicketsServices {
 
       await TicketsModel.writeTicket(tdb);
 
-      return { message: "TICKET_DELETED_SUCCESSFULLY" };
+      return { message: "TICKET_DELETED_SUCCESSFULLY 🚀" };
     } catch (error) {
       throw error;
     }

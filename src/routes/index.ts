@@ -9,7 +9,7 @@ const indexRouter = Router();
 //ROUTES
 
 indexRouter.use("/auth", authRouter);
-indexRouter.use("/users",checkToken, usersRouter);//checkToken, ENTRE EL ENDPOINT Y EL ROUTER
-indexRouter.use("/tickets",checkToken, ticketsRouter);//checkToken,
+indexRouter.use("/users",checkToken, usersRouter);
+indexRouter.use("/tickets",checkToken, ticketsRouter);
 
 export default indexRouter;

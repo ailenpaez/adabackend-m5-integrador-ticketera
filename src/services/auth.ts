@@ -1,10 +1,10 @@
-import { Request, Response, NextFunction } from "express";
 import { User } from "../interfaces/userInterfaces";
 import { v4 } from "uuid";
 import UsersService from "./users";
 import AuthModel from "../model/auth";
 import createHash from "../utils/createHash";
 import UsersModel from "../model/users";
+import { validatePartialUser } from "../validators/usersValidators";
 
 class AuthService {
   static async registerUser(user: User) {
@@ -12,7 +12,7 @@ class AuthService {
       const userId = await UsersService.createNewUser({
         username: user.username,
         email: user.email,
-        password: createHash(user.password), //!cambiadito primero
+        password: createHash(user.password),
         level: user.level,
         status: user.status,
         position: user.position,
@@ -46,7 +46,7 @@ class AuthService {
       );
 
       if (!userAuth) {
-        const error = new Error("USER_NOT_FOUND");
+        const error = new Error("USER_NOT_FOUND👀");
         error["statusCode"] = 404;
         throw error;
       }
@@ -74,7 +74,7 @@ class AuthService {
       const users = await AuthModel.readAuth();
       const foundUser = users.auth.find((user) => user.username === username);
       if (!foundUser) {
-        const error = new Error("USER_NOT_FOUND");
+        const error = new Error("USER_NOT_FOUND👀");
 
         error["statusCode"] = 404;
 
@@ -93,7 +93,7 @@ class AuthService {
       const auth = authDb.auth.find((auth) => auth.token == token);
 
       if (!auth) {
-        const error = new Error("TOKEN_NOT_FOUND");
+        const error = new Error("TOKEN_NOT_FOUND👀");
         error["statusCode"] = 404;
 
         throw error;
@@ -107,18 +107,26 @@ class AuthService {
     }
   }
 
-  static async updateUserById(id: string, data: User) {
+  static async updateUserById(id: string, data: Partial<User>) {
     try {
+      const validation = validatePartialUser(data);
+      if (!validation.success) {
+        const errorMessages = validation.error.issues
+          .map((issue) => issue.message)
+          .join(", ");
+        throw new Error(`VALIDATION_ERROR👎🏼: ${errorMessages}`);
+      }
+
       const udb = await UsersModel.getAllUsers();
       const userUpdate = udb.rows.findIndex((user) => user.id === id);
 
       if (userUpdate === -1) {
-        const error = new Error("USER_NOT_FOUND");
+        const error = new Error("USER_NOT_FOUND👀");
         error["statusCode"] = 404;
         throw error;
       }
-      const currentUser = udb.rows[userUpdate];
 
+      const currentUser = udb.rows[userUpdate];
       udb.rows[userUpdate] = { ...currentUser, ...data };
 
       await UsersModel.writeUser(udb);
@@ -136,7 +144,7 @@ class AuthService {
       const filteredUsers = udb.rows.filter((user) => user.id !== id);
 
       if (udb.rows.length === filteredUsers.length) {
-        const error = new Error("USER_NOT_FOUND");
+        const error = new Error("USER_NOT_FOUND👀");
         error["statusCode"] = 404;
         throw error;
       }
@@ -145,7 +153,7 @@ class AuthService {
 
       await UsersModel.writeUser(udb);
 
-      return { message: "USER_DELETED_SUCCESSFULLY" };
+      return { message: "USER_DELETED_SUCCESSFULLY🚀" };
     } catch (error) {
       throw error;
     }
