@@ -147,5 +147,7 @@ Acceso al reporte  [API - Bug Register ](https://documenter.getpostman.com/view/
 ## 🔹 ERD PARA EL FLUJO DE FUNCIONAMIENTO DE LA API: FALTA
 ![ERD](https://pbs.twimg.com/media/GW78uYOWcAE_2tC?format=jpg&name=large)
 
+
+- 💼[Linkedin](https://www.linkedin.com/in/paezailenj/)
+- 🚀 [Deploy](https://adabackend-m5-integrador-ticketera.onrender.com/status)
 - 📝Autor: Ailén Páez.
-- - 💼[Linkedin](https://www.linkedin.com/in/paezailenj/)
