@@ -9,6 +9,16 @@
       "position": ["support", "frontend"],
       "country": "ARG",
       "id": "4dd95472-1e82-4709-9907-0d91f33ed233"
+    },
+    {
+      "username": "ailenjp",
+      "email": "usuario@empresa.com",
+      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "0792d45a-586a-47fd-8966-8624f07b62f4"
     }
   ]
 }

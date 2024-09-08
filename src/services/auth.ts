@@ -70,7 +70,26 @@ class AuthService {
     }
   }
 
-  static async logoutUser() {}
+  static async logoutUser(token) {
+    try {
+      const authDb = await AuthModel.readAuth();
+
+      const auth = authDb.auth.find((auth) => auth.token == token);
+
+      if (!auth) {
+        const error = new Error("TOKEN_NOT_FOUND");
+        error["statusCode"] = 404;
+
+        throw error;
+      }
+
+      auth.token = null;
+
+      await AuthModel.writeAuth(authDb);
+    } catch (error) {
+      throw error;
+    }
+  }
 
   static async updateUserById(id: string, data: User) {
     try {
@@ -94,7 +113,7 @@ class AuthService {
     }
   }
 
-  static async deleteUserById(id:string) {
+  static async deleteUserById(id: string) {
     try {
       const udb = await UsersModel.getAllUsers();
 

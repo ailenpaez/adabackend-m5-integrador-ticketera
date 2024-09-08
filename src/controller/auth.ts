@@ -63,7 +63,13 @@ class AuthController {
     }
   }
 
-  static async logoutUser() {}
-}
+  static async logoutUser(req: Request, res: Response, next: NextFunction) {
+    try {
+      const token = await AuthService.logoutUser(req.query.token);
+      res.status(200).json({ message:"TOKEN_DELETED_SUCCESSFULLY" });
+    } catch (error) {
+      next(error);
+    }
+  }}
 
 export default AuthController;
