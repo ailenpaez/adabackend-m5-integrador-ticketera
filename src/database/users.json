@@ -9,6 +9,106 @@
       "position": ["support", "frontend"],
       "country": "ARG",
       "id": "4dd95472-1e82-4709-9907-0d91f33ed233"
+    },
+    {
+      "username": "jonsnow",
+      "email": "jon.snow@winterfell.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 1,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "WES",
+      "id": "40965514-5fe1-473f-8299-2d6e882905a9"
+    },
+    {
+      "username": "daenerystargaryen",
+      "email": "daenerys@dragons.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 3,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "WES",
+      "id": "aa7d793b-c8a7-4956-af39-a1e70bd71826"
+    },
+    {
+      "username": "cerseilannister",
+      "email": "cersei@kingdom.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 4,
+      "status": "inactive",
+      "position": ["support"],
+      "country": "WES",
+      "id": "acf00309-0721-4d63-840d-0d7065eb395d"
+    },
+    {
+      "username": "aryastark",
+      "email": "arya@winterfell.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 2,
+      "status": "active",
+      "position": ["qa"],
+      "country": "WES",
+      "id": "d4fbcfe8-d0ea-4fc0-97c7-cd51798625fd"
+    },
+    {
+      "username": "tyrionlannister",
+      "email": "tyrion@kingdom.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 3,
+      "status": "active",
+      "position": ["frontend"],
+      "country": "WES",
+      "id": "efa3f6af-aa14-4f78-82a4-b5fe95c6d92b"
+    },
+    {
+      "username": "nedstark",
+      "email": "ned@winterfell.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 3,
+      "status": "active",
+      "position": ["support", "qa"],
+      "country": "WES",
+      "id": "af406398-7866-4209-9240-22870bf3520d"
+    },
+    {
+      "username": "sansastark",
+      "email": "sansa@winterfell.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 2,
+      "status": "active",
+      "position": ["frontend"],
+      "country": "WES",
+      "id": "1d52c577-be8d-4e97-879f-1aaed2b35c01"
+    },
+    {
+      "username": "jaimelannister",
+      "email": "jaime@kingdom.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 4,
+      "status": "inactive",
+      "position": ["support", "UX/UI"],
+      "country": "WES",
+      "id": "157d0e03-6a4d-450a-add5-6936e5c65a18"
+    },
+    {
+      "username": "branstark",
+      "email": "bran@winterfell.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 2,
+      "status": "active",
+      "position": ["dev"],
+      "country": "WES",
+      "id": "772144f3-23e7-42c4-b75f-4106d582d2a4"
+    },
+    {
+      "username": "robbstark",
+      "email": "robb@winterfell.com",
+      "password": "bfe9edae6c93ecda064419d043eae9f6be8a7b27ba05a8651de8aa9ec703a290",
+      "level": 3,
+      "status": "active",
+      "position": ["support", "dev"],
+      "country": "WES",
+      "id": "0d8b56e8-135e-4baf-85c2-f6b14b0349c2"
     }
   ]
 }

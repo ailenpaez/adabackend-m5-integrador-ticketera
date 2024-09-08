@@ -10,6 +10,171 @@
       "link": "https://github.com/",
       "evidence": [],
       "status": "done"
+    },
+    {
+      "ticketId": "dc4117ac-d1a0-4c8a-85ca-a3bcfcb3ca81",
+      "username": "daenerystargaryen",
+      "date": "2024-09-03T10:15:30Z",
+      "area": ["frontend", "backend"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.",
+      "link": "https://github.com/issue1",
+      "evidence": ["photo"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "bf7a29ff-c0b4-454b-9bae-aa42d0910e24",
+      "username": "jonsnow",
+      "date": "2024-09-03T11:00:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de rendimiento",
+      "description": "La carga de la página principal es extremadamente lenta.",
+      "link": "https://github.com/issue2",
+      "evidence": ["video"],
+      "status": "done"
+    },
+    {
+      "ticketId": "b19e09d2-5a0a-4946-8f21-1ffc7fdb76b6",
+      "username": "cerseilannister",
+      "date": "2024-09-03T12:30:00Z",
+      "area": ["backend"],
+      "bugType": "Error de seguridad",
+      "description": "Vulnerabilidad detectada en la autenticación de usuarios.",
+      "link": "https://github.com/issue3",
+      "evidence": ["pdf"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "0f9ff31c-b90f-4a25-9845-63b770bcee72",
+      "username": "aryastark",
+      "date": "2024-09-04T09:45:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de diseño",
+      "description": "El diseño del formulario de registro no se adapta a dispositivos móviles.",
+      "link": "https://github.com/issue4",
+      "evidence": ["photo"],
+      "status": "done"
+    },
+    {
+      "ticketId": "ce18075a-9f03-4681-9824-e515319a3582",
+      "username": "tyrionlannister",
+      "date": "2024-09-04T14:20:00Z",
+      "area": ["backend"],
+      "bugType": "Error de funcionalidad",
+      "description": "La API de búsqueda no devuelve resultados correctos.",
+      "link": "https://github.com/issue5",
+      "evidence": ["video"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "2b1099e4-7542-46fd-bd2c-41c26ed58ffa",
+      "username": "nedstark",
+      "date": "2024-09-05T10:15:30Z",
+      "area": ["frontend", "backend"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "El mensaje de error no se muestra en el formulario de inicio de sesión.",
+      "link": "https://github.com/issue6",
+      "evidence": ["pdf"],
+      "status": "done"
+    },
+    {
+      "ticketId": "6a0e471f-3094-4e07-a60f-1d7b849033da",
+      "username": "sansastark",
+      "date": "2024-09-05T11:30:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de diseño",
+      "description": "Los colores de los botones no son accesibles para usuarios con daltonismo.",
+      "link": "https://github.com/issue7",
+      "evidence": ["photo"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "5a5d4da4-c536-4846-9f9c-584d1a18b892",
+      "username": "jaimelannister",
+      "date": "2024-09-06T12:00:00Z",
+      "area": ["backend"],
+      "bugType": "Error de rendimiento",
+      "description": "El servidor de la base de datos está tardando mucho en responder.",
+      "link": "https://github.com/issue8",
+      "evidence": ["video"],
+      "status": "done"
+    },
+    {
+      "ticketId": "ce4d99fb-3372-4f7b-a810-2a665a2a8103",
+      "username": "branstark",
+      "date": "2024-09-06T13:15:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de funcionalidad",
+      "description": "El botón de 'Filtrar' no funciona en la página de resultados.",
+      "link": "https://github.com/issue9",
+      "evidence": ["pdf"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "cbb67a34-352e-4c3f-8b1e-ea2bbe80d3ff",
+      "username": "robbstark",
+      "date": "2024-09-07T08:45:00Z",
+      "area": ["backend"],
+      "bugType": "Error de seguridad",
+      "description": "Se detectó una brecha de seguridad en la autorización de usuarios.",
+      "link": "https://github.com/issue10",
+      "evidence": ["photo"],
+      "status": "done"
+    },
+    {
+      "ticketId": "297210de-aed2-4915-8962-51442d91ca55",
+      "username": "daenerystargaryen",
+      "date": "2024-09-07T10:00:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de diseño",
+      "description": "El encabezado del sitio web se superpone con el contenido en pantallas pequeñas.",
+      "link": "https://github.com/issue11",
+      "evidence": ["video"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "1b5544fd-5eb0-4160-8e19-4bfb6afb887f",
+      "username": "jonsnow",
+      "date": "2024-09-08T09:30:00Z",
+      "area": ["backend"],
+      "bugType": "Error de funcionalidad",
+      "description": "La función de recuperación de contraseña no envía el correo electrónico.",
+      "link": "https://github.com/issue12",
+      "evidence": ["pdf"],
+      "status": "done"
+    },
+    {
+      "ticketId": "4aa8665a-9c2c-4c5d-8225-717313337f31",
+      "username": "cerseilannister",
+      "date": "2024-09-08T11:15:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de rendimiento",
+      "description": "El tiempo de carga de la página de perfil es muy alto.",
+      "link": "https://github.com/issue13",
+      "evidence": ["photo"],
+      "status": "pending"
+    },
+    {
+      "ticketId": "aa7e9958-ca98-4cf3-a81d-3bcbc701e1b1",
+      "username": "aryastark",
+      "date": "2024-09-09T12:00:00Z",
+      "area": ["backend"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "El campo de fecha en el formulario de contacto no permite seleccionar fechas pasadas.",
+      "link": "https://github.com/issue14",
+      "evidence": ["video"],
+      "status": "done"
+    },
+    {
+      "ticketId": "c8e45ac5-a915-41f8-88d0-4f20ca1434b8",
+      "username": "tyrionlannister",
+      "date": "2024-09-09T13:30:00Z",
+      "area": ["frontend"],
+      "bugType": "Error de diseño",
+      "description": "El texto en el botón de 'Enviar' está cortado en el idioma alemán.",
+      "link": "https://github.com/issue15",
+      "evidence": ["pdf"],
+      "status": "pending"
     }
   ]
 }
