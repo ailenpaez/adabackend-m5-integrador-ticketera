@@ -1,6 +1,10 @@
 import { v4 } from "uuid";
 import TicketsModel from "../model/tickets";
 import { BugTicket } from "../interfaces/ticketInterfaces";
+import {
+  validateTicket,
+  validatePartialTicket,
+} from "../validators/ticketValidatos";
 
 class TicketsServices {
   //implemento qp
@@ -23,12 +27,10 @@ class TicketsServices {
   // CREATE
   static async createTicket(bug: BugTicket) {
     try {
-      const dbTicket = await TicketsModel.getAllTickets();
-
       const ticketId = v4();
 
       const newTicket = {
-        ticketId: ticketId,
+        ticketId,
         username: bug.username,
         date: bug.date,
         area: bug.area,
@@ -39,8 +41,16 @@ class TicketsServices {
         status: bug.status,
       };
 
-      dbTicket.tickets.push(newTicket);
+      const validation = validateTicket(newTicket);
+      if (!validation.success) {
+        const errorMessages = validation.error.issues
+          .map((issue) => issue.message)
+          .join(", ");
+        throw new Error(`VALIDATION_ERROR: ${errorMessages}`);
+      }
 
+      const dbTicket = await TicketsModel.getAllTickets();
+      dbTicket.tickets.push(newTicket);
       await TicketsModel.writeTicket(dbTicket);
 
       return newTicket;
@@ -48,6 +58,7 @@ class TicketsServices {
       throw error;
     }
   }
+
   //READ
   static async getTicketById(id: string) {
     try {
@@ -69,27 +80,38 @@ class TicketsServices {
     }
   }
 
-  //UPDATE
-  static async updateTicketById(id: string, data: BugTicket) {
+//UPDATE
+  static async updateTicketById(id: string, data) {
     try {
+      const validation = validatePartialTicket(data);
+
+      if (!validation.success) {
+        const errorMessages = validation.error.issues
+          .map((issue) => issue.message)
+          .join(", ");
+        throw new Error(`VALIDATION_ERROR: ${errorMessages}`);
+      }
+
       const tdb = await TicketsModel.getAllTickets();
 
-      const ticketUpdate = tdb.tickets.findIndex(
+      const ticketUpdateIndex = tdb.tickets.findIndex(
         (ticket) => ticket.ticketId === id
       );
 
-      if (ticketUpdate === -1) {
+      if (ticketUpdateIndex === -1) {
         const error = new Error("TICKET_NOT_FOUND");
         error["statusCode"] = 404;
         throw error;
       }
-      const currentTicket = tdb.tickets[ticketUpdate];
 
-      tdb.tickets[ticketUpdate] = { ...currentTicket, ...data };
+      const currentTicket = tdb.tickets[ticketUpdateIndex];
+      const updatedTicket = { ...currentTicket, ...data };
+
+      tdb.tickets[ticketUpdateIndex] = updatedTicket;
 
       await TicketsModel.writeTicket(tdb);
 
-      return tdb.tickets[ticketUpdate];
+      return updatedTicket;
     } catch (error) {
       throw error;
     }
