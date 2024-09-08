@@ -144,7 +144,7 @@ Acceso al reporte  [API - Bug Register ](https://documenter.getpostman.com/view/
 * http://localhost:{PORT}/tickets?status=pending -> **REQUIERE TOKEN**, *(getter)*. 👉🏼 Requiere el token de inicio de sesión, para ver el listado de tickets según el status (puede ser *pendig* o *done)*  .
 
 
-## 🔹 ERD PARA EL FLUJO DE FUNCIONAMIENTO DE LA API: FALTA
+## 🔹 ERD PARA EL FLUJO DE FUNCIONAMIENTO DE LA API: 
 ![ERD](https://pbs.twimg.com/media/GW78uYOWcAE_2tC?format=jpg&name=large)
 
 
