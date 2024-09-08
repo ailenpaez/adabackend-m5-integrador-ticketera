@@ -19,6 +19,36 @@
       "position": ["support", "frontend"],
       "country": "ARG",
       "id": "0792d45a-586a-47fd-8966-8624f07b62f4"
+    },
+    {
+      "username": "milanesa",
+      "email": "usuario@empresa.com",
+      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "41a768c7-29a2-47d7-9f3f-7d45fc7b8e8a"
+    },
+    {
+      "username": "milanesa",
+      "email": "usuario@empresa.com",
+      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "85775232-9d23-4698-908e-608ae5aafb9e"
+    },
+    {
+      "username": "milaconpapas",
+      "email": "usuario@empresa.com",
+      "password": "1378fc6984344d1e968ca97917311999cbdb13c3677df7b023c4561566c809f0",
+      "level": 2,
+      "status": "active",
+      "position": ["support", "frontend"],
+      "country": "ARG",
+      "id": "96c2700b-7f3c-42ab-a37b-43f6836970db"
     }
   ]
 }

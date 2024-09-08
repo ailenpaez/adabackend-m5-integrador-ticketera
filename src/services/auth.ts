@@ -39,14 +39,30 @@ class AuthService {
   static async loginUser(dataUser: { username; password }) {
     try {
       const user = await UsersService.getUserByUsername(dataUser.username);
-      const userAuth = await AuthService.getUserByUsername(user.username);
+      const authDb = await AuthModel.readAuth();
 
-      if (userAuth.password != createHash(dataUser.password)) {
-        const error = new Error("INCORRECT_PASSWORD⛔");
-        error["statusCode"] = 400;
+      const userAuth = authDb.auth.find(
+        (auth) => auth.username === user.username
+      );
 
+      if (!userAuth) {
+        const error = new Error("USER_NOT_FOUND");
+        error["statusCode"] = 404;
         throw error;
       }
+
+      if (userAuth.password !== createHash(dataUser.password)) {
+        const error = new Error("INCORRECT_PASSWORD⛔");
+        error["statusCode"] = 400;
+        throw error;
+      }
+
+      if (!userAuth.token) {
+        const newToken = createHash(v4());
+        userAuth.token = newToken;
+        await AuthModel.writeAuth(authDb);
+      }
+
       return userAuth.token;
     } catch (error) {
       throw error;
