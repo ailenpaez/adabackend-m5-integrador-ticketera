@@ -145,7 +145,7 @@ Acceso al reporte  [API - Bug Register ](https://documenter.getpostman.com/view/
 
 
 ## 🔹 ERD PARA EL FLUJO DE FUNCIONAMIENTO DE LA API: FALTA
-![ERD]()
+![ERD](https://pbs.twimg.com/media/GW78uYOWcAE_2tC?format=jpg&name=large)
 
 - 📝Autor: Ailén Páez.
 - - 💼[Linkedin](https://www.linkedin.com/in/paezailenj/)
