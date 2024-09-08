@@ -1,1 +1,15 @@
-{"tickets":[{"ticketId":"a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6","username":"gasparP","date":"2024-09-03T10:15:30Z","area":["frontend","backend"],"bugType":"Error de interfaz de usuario","description":"El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.","link":"https://github.com/","evidence":[],"status":"done"},{"ticketId":"bde14bcf-44b3-41d4-a3c8-160a33457fb3","username":"dibumartinez","date":"7/9/2024 - 00.36am","area":["frontend","landing page"],"bugType":"Error de interfaz de usuario","description":"No es responsive","link":"https://github.com/","evidence":["foto","video"],"status":"pending"},{"ticketId":"cb6353d6-fc7c-4c66-a7b8-3deb7ce46bd8","username":"testuser","date":"2024-09-07T10:15:30Z","area":["frontend"],"bugType":"Error en la UI","description":"Este es un ejemplo de descripción válida que contiene más de 50 caracteres.","link":"https://example.com","evidence":[],"status":"pending"},{"ticketId":"0b58a7a5-5504-4741-8058-5a007852e8ea","username":"testuser","date":"2024-09-07T10:15:30Z","area":["frontend"],"bugType":"Error en la UI","description":"Este es un ejemplo de descripción válida que contiene más de 50 caracteres.","link":"https://example.com","evidence":["foto"],"status":"pending"},{"ticketId":"98f891eb-1f13-49d3-8d86-7990040ce42f","username":"testuser","date":"2024-09-07T10:15:30Z","area":["frontend"],"bugType":"Error en la UI","description":"blablabla blblblbllsllasasdasdasdasdasdadad","link":"https://example.com","evidence":["foto"],"status":"pending"},{"ticketId":"d6804e84-6b0b-4785-ab7e-093c15f2e1da","username":"marialadelbarrio","date":"2024-09-07T10:15:30Z","area":["pipi"],"bugType":"Error en la UI","description":"blablabla blblblbllsllasasdasdasdasdasdadad","link":"https://example.com","evidence":["foto"],"status":"pending"},{"ticketId":"8307af9a-93db-4c6f-9dc4-6065bbfd246e","username":"marialadelbarrio","date":"2024-09-07T10:15:30Z","area":["pipi"],"bugType":"Error en la UI","description":"blablabla blblblbllsllasasdasdasdasdasdadad","link":"https://example.com","evidence":["foto"],"status":"done"},{"ticketId":"5652d227-935e-41f3-b142-355ec2f8a678","username":"testuser","date":"2024-09-07T10:15:30Z","area":["frontend"],"bugType":"Error en la UI","description":"blablabla blblblbllsllasasdasdasdasdasdadad","link":"https://example.com","evidence":["foto"],"status":"pending"},{"ticketId":"440be02a-966b-4128-bbaf-26f166e7822c","username":"ASAS","date":"2024-09-07T10:15:30Z","area":[],"bugType":"Error en la UI","description":"blablabla blblblbllsllasasdasdasdasdasdadad","link":"https://example.com","evidence":["foto"],"status":"pending"},{"ticketId":"f9237500-c4ec-4546-a9ef-15e97e9c7d95","username":"ASAS","date":"2024-09-07T10:15:30Z","area":["qa"],"bugType":"Error en la UI","description":"blablabla blblblbllsllasasdasdasdasdasdadad","link":"https://example.com","evidence":["foto"],"status":"pending"}]}
+{
+  "tickets": [
+    {
+      "ticketId": "a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6",
+      "username": "example",
+      "date": "2024-09-03T10:15:30Z",
+      "area": ["frontend", "backend"],
+      "bugType": "Error de interfaz de usuario",
+      "description": "El botón de 'Enviar' no responde cuando se hace clic en la página de contacto.",
+      "link": "https://github.com/",
+      "evidence": [],
+      "status": "done"
+    }
+  ]
+}
